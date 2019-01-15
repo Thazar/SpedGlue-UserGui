@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@../css/JMetroLightTheme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.modernway.spedglue.usergui.controllers.UserGuiMainController">
+<top>
+    <Pane prefHeight="16.0" prefWidth="600.0" style="-fx-background-color: white">
+    <Button stylesheets="@../css/QuickAccesBar.css">
+        <graphic>
+            <ImageView>
+                <Image url="@../icons/icons8-shutdown-16.png" />
+            </ImageView>
+        </graphic>
+    </Button>
+    <Button layoutX="37.0" stylesheets="@../css/QuickAccesBar.css">
+        <graphic>
+      <ImageView>
+          <Image url="@../icons/icons8-redo-16.png" />
+      </ImageView>
+        </graphic>
+    </Button>
+        <Button layoutX="18.0" stylesheets="@../css/TopButtons.css" />
+<ImageView layoutX="18.0">
+    <Image url="@../icons/icons8-undo-16.png" />
+</ImageView>
+    </Pane>
+</top>
+   <center>
+      <Pane prefHeight="1058.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <children>
+            <TabPane prefHeight="171.0" prefWidth="1920.0" style="-fx-background-color: white" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Nowe">
+                     <AnchorPane prefHeight="136.0" prefWidth="1920.0" stylesheets="@../css/TopButtons.css">
+                        <children>
+                          <Button contentDisplay="TOP" layoutX="14.0" layoutY="23.0" maxHeight="89.0" maxWidth="86.0" prefHeight="88.0" prefWidth="80.0" text=" Nowe Zlecenie" textAlignment="CENTER" wrapText="true">
+                              <graphic>
+                                  <ImageView fitHeight="45.0" fitWidth="50.0">
+                                      <Image url="@../icons/icons8-compose-64.png" />
+                                  </ImageView>
+                              </graphic>
+                          </Button>
+                            <Button contentDisplay="TOP" layoutX="94.0" layoutY="23.0" onAction="#nowyKlientButtonHandler" prefHeight="88.0" prefWidth="80.0" text="  Nowy  Klient" textAlignment="CENTER" wrapText="true">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0">
+                                        <Image url="@../icons/icons8-add-user-male-64.png" />
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Button contentDisplay="TOP" layoutX="174.0" layoutY="23.0" prefHeight="88.0" prefWidth="80.0" text="Nowy Przewoźnik" textAlignment="CENTER" wrapText="true">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0">
+                                        <Image url="@../icons/icons8-in-transit-64.png" />
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                           <Separator layoutX="261.0" layoutY="22.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="1.0" />
+                           <Label layoutX="115.0" layoutY="115.0" text="System" textAlignment="CENTER" textFill="#393535bf" />
+                           <Separator layoutY="133.0" prefHeight="2.0" prefWidth="1920.0" />
+                        </children>
+                     </AnchorPane>
+                </Tab>
+                <Tab text="Podgląd">
+                    <AnchorPane prefHeight="143.0" prefWidth="1920.0" stylesheets="@../css/TopButtons.css">
+                        <children>
+                            <Button contentDisplay="TOP" layoutX="14.0" layoutY="23.0" maxHeight="89.0" maxWidth="86.0" prefHeight="88.0" prefWidth="80.0" text="Zlecenia" textAlignment="CENTER" wrapText="true">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0">
+                                        <Image url="@../icons/icons8-binder-64.png" />
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Button contentDisplay="TOP" layoutX="94.0" layoutY="23.0" prefHeight="88.0" prefWidth="80.0" text="Baza Klientów" textAlignment="CENTER" wrapText="true">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0">
+                                        <Image url="@../icons/icons8-conference-64.png" />
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Button contentDisplay="TOP" layoutX="174.0" layoutY="23.0" prefHeight="88.0" prefWidth="80.0" text="Baza Przewoźników" textAlignment="CENTER" wrapText="true">
+                                <graphic>
+                                    <ImageView fitHeight="45.0" fitWidth="50.0">
+                                        <Image url="@../icons/icons8-traffic-jam-64.png" />
+                                    </ImageView>
+                                </graphic>
+                            </Button>
+                            <Separator layoutX="261.0" layoutY="22.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="1.0" />
+                            <Label layoutX="115.0" layoutY="115.0" text="System" textAlignment="CENTER" textFill="#393535bf" />
+                            <Separator layoutY="133.0" prefHeight="2.0" prefWidth="1920.0" />
+                        </children>
+                    </AnchorPane>
+                </Tab>
+                  <Tab text="Narzędzia">
+                      <AnchorPane>
+                          <children>
+                              <Separator layoutY="133.0" prefHeight="2.0" prefWidth="1920.0" />
+                          </children>
+                      </AnchorPane>
+                  </Tab>
+              </tabs>
+            </TabPane>
+            <TabPane fx:id="newTabContainer" layoutY="173.0" prefHeight="902.0" prefWidth="1920.0" tabClosingPolicy="ALL_TABS">
+              <tabs>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

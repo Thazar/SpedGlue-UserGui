@@ -1,0 +1,44 @@
+.button {
+    -fx-border-color: transparent !important;
+    -fx-border-width: 0 !important;
+    -fx-padding: 0 !important;
+
+    -fx-background-radius: 0 !important;
+
+    -fx-background-color: transparent !important;
+
+    -fx-font-family: "Segoe UI" !important;
+    -fx-text-fill: #828282 !important;
+
+    -fx-min-width: 16px;
+    -fx-max-width: 16px;
+    -fx-min-height: 16px;
+    -fx-max-height: 16px;
+
+    -fx-content-display: right;
+    -fx-ellipsis-string: '';
+}
+
+.button:hover{
+    -fx-background-color: #2796c4 !important;
+}
+
+.button:pressed
+{
+    -fx-background-color: black !important;
+    -fx-text-fill: white !important;
+}
+
+.button:focused
+{
+    -fx-border-color: transparent, black !important;
+    -fx-border-width: 1, 1 !important;
+    -fx-border-style: solid, segments(1, 2) !important;
+    -fx-border-radius: 0, 0 !important;
+    -fx-border-insets: 1 1 1 1, 0 !important;
+}
+
+.button:disabled
+{
+    -fx-opacity: 0.4 !important;
+}
